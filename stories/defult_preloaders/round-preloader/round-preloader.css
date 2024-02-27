@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+body {
+  font-family: "Roboto";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 80px 0;
+}
+
+.loaders {
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  counter-reset: list;
+  margin-bottom: -100px;
+  margin-right: -100px;
+  margin-left: -100px;
+}
+
+.loaders .loader {
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+.loaders .loader::before {
+  counter-increment: list;
+  content: counter(list, decimal-leading-zero);
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  font-size: 16px;
+}
+
+.loader1 span {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: transparent #000000 #000;
+  -webkit-animation: cssload-spin 690ms infinite linear;
+          animation: cssload-spin 690ms infinite linear;
+}
+@-webkit-keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
